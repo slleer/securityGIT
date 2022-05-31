@@ -1,0 +1,10 @@
+package com.example.demo.repository;
+
+import com.example.demo.domain.Student;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import javax.transaction.Transactional;
+
+public interface StudentRepository extends JpaRepository<Student, Long> {
+    Student findByName(String name);
+}
